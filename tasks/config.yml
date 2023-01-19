@@ -1,4 +1,6 @@
 ---
+#- set_fact: applist={{ ansible_facts['ansible_local']['awario_app'] | dict2items }}
+
 - name: Copy Filebeat configuration.
   template:
     src: "{{ filebeat_template }}"
