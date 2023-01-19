@@ -125,3 +125,13 @@ MIT / BSD
 ## Author Information
 
 This role was created in 2016 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+
+## Генерация конфигурации для темплейта ##
+
+Для Генерации используется
+
+- set_fact: applist={{ ansible_facts['ansible_local']['awario_app'] | dict2items }}
+
+СБор из фактов информации о установленных приложениях и передача их в темплейт черезх переменную applist
+
+##
